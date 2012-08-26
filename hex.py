@@ -15,7 +15,12 @@
 
 
 def test1():
+    assert hex_in_direction([3, 5, 0], 1) == [3, 5, 1]
+    assert hex_in_direction([3, 5, 0], 2) == [3, 5, 2]
+    assert hex_in_direction([3, 5, 0], 3) == [3, 5, 3]
     assert hex_in_direction([3, 5, 0], 4) == [3, 5, 4]
+    assert hex_in_direction([3, 5, 0], 5) == [3, 5, 5]
+    assert hex_in_direction([3, 5, 0], 6) == [3, 5, 6]
 
 
 # By considering the inverse we can see that if the hex addresses ends in a
