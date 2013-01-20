@@ -127,8 +127,14 @@ def hex_in_direction(start, direction):
     if start[-1] - direction == -2:
         return start[:-1] + [direction - 1]
     if abs(start[-1] - direction) == 4:
-        return start[:-1] + [(((start[-1] + 6 + direction) / 2 - 1) % 6) + 1]
+        return start[:-1] + [mod6((start[-1] + 6 + direction) / 2)]
 
+
+# Because our directions go 1 thru 6 rather than 0 thru 5, we can't just
+# use % 6 so we instead use the following:
+
+def mod6(n):
+    return ((n - 1) % 6 + 1)
 
 # Let's prove it passes the tests:
 
