@@ -1,6 +1,0 @@
-Trying to work out how the hexagonal equivalent of a quadtree works (visually).
-I've started going down path of each level overlapping the hexes of the previous level.
-What's neat about that is each edge gets a hex at the finer level (potentially useful for some of the applications I have in mind)
-So each hex has 7 children, the central one (we'll call 0) and 6 others which we can number clockwise from top right 1-6.
-A hex can then be identified by a dotted-path such as `3.5.0.2.1`.
-This scheme may allow for partitioning of maps across servers while, as a result of the overlap, provide a basis by which information about adjacent hexes can be shared between those servers.
