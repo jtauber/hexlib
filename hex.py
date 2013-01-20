@@ -126,8 +126,10 @@ def hex_in_direction(start, direction):
         return start[:-1] + [direction + 1]
     if start[-1] - direction == -2:
         return start[:-1] + [direction - 1]
-    if abs(start[-1] - direction) == 4:
-        return start[:-1] + [mod6((start[-1] + 6 + direction) / 2)]
+    if start[-1] - direction == 4:
+        return start[:-1] + [mod6(direction - 1)]
+    if start[-1] - direction == -4:
+        return start[:-1] + [mod6(direction + 1)]
 
 
 # Because our directions go 1 thru 6 rather than 0 thru 5, we can't just
