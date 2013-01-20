@@ -111,8 +111,6 @@ def test4():
 #
 #     if (t - d) == 2, result is d + 1 (== t - 1)
 #     if (t - d) == -2, result is d - 1 (== t + 1)
-#     if (t - d) == 2, result is d + 1 (== t - 1)
-#     if (t - d) == -4, result is d - 1 (== t + 1)
 
 
 # We're now handling 24 out of 36 possible situations.
